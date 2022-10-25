@@ -17,6 +17,9 @@
 		B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */; };
 		B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */; };
 		B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */; };
+		B67FDCAA2905EB7D00AD4F94 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */; };
+		B67FDCAE2905ED7A00AD4F94 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */; };
+		B67FDCB22905F12900AD4F94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCB12905F12900AD4F94 /* Status.swift */; };
 		B69142FD2901831C0034C5BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B69142FC2901831C0034C5BA /* GoogleSignIn */; };
 		B69142FF2901831C0034C5BA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B69142FE2901831C0034C5BA /* GoogleSignInSwift */; };
 		B6914303290185E60034C5BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6914302290185E60034C5BA /* FirebaseAuth */; };
@@ -42,6 +45,9 @@
 		B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoComponent.swift; sourceTree = "<group>"; };
 		B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModifier.swift; sourceTree = "<group>"; };
+		B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		B67FDCB12905F12900AD4F94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		B691430D29018C340034C5BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6A74B8829032A6A001B5EAA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B6A74B8A29032A6A001B5EAA /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,23 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		B67FDCA82905EB6700AD4F94 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */,
+				B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		B67FDCB02905F11400AD4F94 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDCB12905F12900AD4F94 /* Status.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B6A74B8629032A6A001B5EAA /* UnAuthenticated */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +183,7 @@
 		B6A74B8F29032A75001B5EAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B67FDCB02905F11400AD4F94 /* Enums */,
 				B63353472905D3F9006D0A5F /* Helpers */,
 				B63353422905D246006D0A5F /* Extensions */,
 				B6A74B9D29032E51001B5EAA /* Modifiers */,
@@ -189,6 +213,7 @@
 		B6A74B9929032A7D001B5EAA /* Authenticated */ = {
 			isa = PBXGroup;
 			children = (
+				B67FDCA82905EB6700AD4F94 /* Tab Bar */,
 			);
 			name = Authenticated;
 			path = "Lista-Mercado/Authenticated";
@@ -285,6 +310,7 @@
 				B6A74B9629032A75001B5EAA /* Application.swift in Sources */,
 				B63353442905D25E006D0A5F /* Color+Extension.swift in Sources */,
 				B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */,
+				B67FDCB22905F12900AD4F94 /* Status.swift in Sources */,
 				B6A74B9529032A75001B5EAA /* AppDelegate.swift in Sources */,
 				B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */,
 				B6A74B8D29032A6A001B5EAA /* SplashScreenView.swift in Sources */,
@@ -295,6 +321,8 @@
 				B6A74B9729032A75001B5EAA /* AuthService.swift in Sources */,
 				B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */,
 				B63353402905CFAA006D0A5F /* ButtonLogin.swift in Sources */,
+				B67FDCAE2905ED7A00AD4F94 /* TabButton.swift in Sources */,
+				B67FDCAA2905EB7D00AD4F94 /* TabBarView.swift in Sources */,
 				B6A74B8C29032A6A001B5EAA /* AuthenticationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
