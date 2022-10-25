@@ -22,8 +22,11 @@ struct Lista_MercadoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+            ContentView()
                 .environmentObject(initialViewModel)
+                .onAppear {
+                    initialViewModel.checkConnect()
+                }
         }
     }
 }

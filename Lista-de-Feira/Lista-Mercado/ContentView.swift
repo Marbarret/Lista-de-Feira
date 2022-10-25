@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
-        ZStack {
-            Color("color-1")
-                .ignoresSafeArea()
-            
-            Text("Initial Screen")
-                .foregroundColor(.white)
-                .font(.system(size: 30))
-            
-        }//Zstack
+        switch authViewModel.statusLogin {
+        case .signedIn: TabBarView()
+        case .signedOut: SplashScreenView()
+        case .unknown: ProgressView()
+        }
     }
 }
 

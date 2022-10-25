@@ -11,39 +11,30 @@ import Firebase
 import GoogleSignIn
 
 protocol AuthServiceProtocol {
-    func signIn()
+    func signIn(completion: @escaping (Result<Bool, ErrorApp>) -> Void)
+    func signOut() -> Bool
+    func checkSignIn() -> Bool
+    func loadSignUser(completion: @escaping (Result<Bool, Error>) -> Void)
 }
 
 class AuthService: AuthServiceProtocol {
     
-    func signIn() {
+    func signIn(completion: @escaping (Result<Bool, ErrorApp>) -> Void) {
         guard let clientId = FirebaseApp.app()?.options.clientID else { return }
         let config = GIDConfiguration(clientID: clientId)
         
         GIDSignIn.sharedInstance.signIn(with: config, presenting: ApplicationUtility.rootViewController) { [self] user, error in
-            if let error = error {
+            if error != nil {
                 return
-            }
-            
-            guard
-                let authentication = user?.authentication,
-                let idToken = authentication.idToken
-            else {
-                return
-            }
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                           accessToken: authentication.accessToken)
-            
-            Auth.auth().signIn(with: credential) { (result, err) in
-                if let error = err {
-                    print(err?.localizedDescription)
+            } else if let GIDuser = user {
+                self.authenticateUser(for: GIDuser) { result in
+                    switch result {
+                    case .success:
+                        completion(.success(true))
+                    case .failure:
+                        completion(.failure(ErrorApp.errorAuthentication))
+                    }
                 }
-                
-                guard let user = result?.user else {
-                    return
-                }
-                print(user.displayName ?? "Success!")
             }
         }
     }
@@ -89,7 +80,7 @@ class AuthService: AuthServiceProtocol {
             let authentication = user?.authentication,
             let idToken = authentication.idToken
         else {
-//            completion(.failure(Error.authentication))
+            completion(.failure(ErrorApp.errorAuthentication))
             return
         }
         

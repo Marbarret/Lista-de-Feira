@@ -12,38 +12,18 @@ struct SplashScreenView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     
     var body: some View {
-        VStack {
-            VStack {
-                Image("lista-feira-2")
-                    .resizable()
-                    .frame(width: 200, height: 120 ,alignment: .center)
-            }
-            .padding()
-            
-            VStack {
-                Button(action: {
-                    authViewModel.signIn()
-                }, label: {
-                    HStack(spacing: 15) {
-                        Image(systemName: "person.fill")
-                            .resizable()
-                            .renderingMode(.template)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 28, height: 28)
-                        
-                        Text("Login User")
-                            .font(.title3)
-                            .fontWeight(.medium)
-                            .kerning(1.1)
-                    }
-                    .foregroundColor(.blue)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                    Capsule()
-                        .strokeBorder(Color.blue)
-                    )
-            })
+        BackgroundInitial {
+            VStack(spacing: 10) {
+                Spacer()
+                LogoComponent()
+                
+                ButtonLogin()
+                
+                Text("Informações de Aplicativo")
+                    .font(.headline)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.theme.bluePrimary)
+                Spacer()
             }
         }
         .overlay(
@@ -56,7 +36,7 @@ struct SplashScreenView: View {
                     ProgressView()
                         .font(.title2)
                         .frame(width: 60, height: 60)
-                        .background(Color.white)
+                        .background(Color.theme.background)
                         .cornerRadius(10)
                 }
             }

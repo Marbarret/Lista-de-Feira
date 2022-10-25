@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63353402905CFAA006D0A5F /* ButtonLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633533F2905CFAA006D0A5F /* ButtonLogin.swift */; };
+		B63353442905D25E006D0A5F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63353432905D25E006D0A5F /* Color+Extension.swift */; };
+		B63353492905D412006D0A5F /* BackgroundInitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63353482905D412006D0A5F /* BackgroundInitial.swift */; };
 		B63EA40428FF707200081CAC /* Lista_MercadoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */; };
 		B63EA40628FF707200081CAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EA40528FF707200081CAC /* ContentView.swift */; };
 		B63EA40828FF707600081CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63EA40728FF707600081CAC /* Assets.xcassets */; };
 		B63EA40B28FF707600081CAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63EA40A28FF707600081CAC /* Preview Assets.xcassets */; };
+		B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */; };
+		B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */; };
+		B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */; };
+		B67FDCAA2905EB7D00AD4F94 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */; };
+		B67FDCAE2905ED7A00AD4F94 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */; };
+		B67FDCB22905F12900AD4F94 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCB12905F12900AD4F94 /* Status.swift */; };
 		B69142FD2901831C0034C5BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B69142FC2901831C0034C5BA /* GoogleSignIn */; };
 		B69142FF2901831C0034C5BA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B69142FE2901831C0034C5BA /* GoogleSignInSwift */; };
 		B6914303290185E60034C5BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6914302290185E60034C5BA /* FirebaseAuth */; };
@@ -24,12 +33,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B633533F2905CFAA006D0A5F /* ButtonLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLogin.swift; sourceTree = "<group>"; };
+		B63353432905D25E006D0A5F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B63353482905D412006D0A5F /* BackgroundInitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundInitial.swift; sourceTree = "<group>"; };
 		B63EA40028FF707200081CAC /* Lista-Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lista-Mercado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista_MercadoApp.swift; sourceTree = "<group>"; };
 		B63EA40528FF707200081CAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B63EA40728FF707600081CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B63EA40A28FF707600081CAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B63EA40C28FF707600081CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoComponent.swift; sourceTree = "<group>"; };
+		B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModifier.swift; sourceTree = "<group>"; };
+		B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		B67FDCB12905F12900AD4F94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		B691430D29018C340034C5BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6A74B8829032A6A001B5EAA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B6A74B8A29032A6A001B5EAA /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -53,6 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63353422905D246006D0A5F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B63353432905D25E006D0A5F /* Color+Extension.swift */,
+				B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B63353472905D3F9006D0A5F /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B63353482905D412006D0A5F /* BackgroundInitial.swift */,
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
 		B63EA3F728FF707200081CAC = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +109,9 @@
 			children = (
 				B6A74B9929032A7D001B5EAA /* Authenticated */,
 				B6A74B8629032A6A001B5EAA /* UnAuthenticated */,
-				B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */,
-				B6A74B8F29032A75001B5EAA /* Resources */,
+				B6A74B8F29032A75001B5EAA /* Helpers */,
 				B63EA40528FF707200081CAC /* ContentView.swift */,
+				B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */,
 				B691430D29018C340034C5BA /* GoogleService-Info.plist */,
 				B63EA40728FF707600081CAC /* Assets.xcassets */,
 				B63EA40C28FF707600081CAC /* Info.plist */,
@@ -93,12 +128,36 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B67FDC9A2905DFB100AD4F94 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B67FDCA82905EB6700AD4F94 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */,
+				B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		B67FDCB02905F11400AD4F94 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDCB12905F12900AD4F94 /* Status.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B6A74B8629032A6A001B5EAA /* UnAuthenticated */ = {
 			isa = PBXGroup;
 			children = (
 				B6A74B8729032A6A001B5EAA /* ViewModel */,
 				B6A74B8929032A6A001B5EAA /* View */,
-				B6A74B8B29032A6A001B5EAA /* InitialScreen */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";
@@ -114,26 +173,24 @@
 		B6A74B8929032A6A001B5EAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B67FDC9A2905DFB100AD4F94 /* Component */,
 				B6A74B8A29032A6A001B5EAA /* SplashScreenView.swift */,
+				B633533F2905CFAA006D0A5F /* ButtonLogin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		B6A74B8B29032A6A001B5EAA /* InitialScreen */ = {
+		B6A74B8F29032A75001B5EAA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = InitialScreen;
-			sourceTree = "<group>";
-		};
-		B6A74B8F29032A75001B5EAA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
+				B67FDCB02905F11400AD4F94 /* Enums */,
+				B63353472905D3F9006D0A5F /* ViewBuilder */,
+				B63353422905D246006D0A5F /* Extensions */,
 				B6A74B9D29032E51001B5EAA /* Modifiers */,
 				B6A74B9029032A75001B5EAA /* Classes */,
 				B6A74B9329032A75001B5EAA /* Service */,
 			);
-			path = Resources;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B6A74B9029032A75001B5EAA /* Classes */ = {
@@ -156,6 +213,7 @@
 		B6A74B9929032A7D001B5EAA /* Authenticated */ = {
 			isa = PBXGroup;
 			children = (
+				B67FDCA82905EB6700AD4F94 /* Tab Bar */,
 			);
 			name = Authenticated;
 			path = "Lista-Mercado/Authenticated";
@@ -165,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B6A74B9E29032E65001B5EAA /* ImageLoad.swift */,
+				B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -249,12 +308,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A74B9629032A75001B5EAA /* Application.swift in Sources */,
+				B63353442905D25E006D0A5F /* Color+Extension.swift in Sources */,
+				B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */,
+				B67FDCB22905F12900AD4F94 /* Status.swift in Sources */,
 				B6A74B9529032A75001B5EAA /* AppDelegate.swift in Sources */,
+				B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */,
 				B6A74B8D29032A6A001B5EAA /* SplashScreenView.swift in Sources */,
 				B63EA40628FF707200081CAC /* ContentView.swift in Sources */,
 				B63EA40428FF707200081CAC /* Lista_MercadoApp.swift in Sources */,
+				B63353492905D412006D0A5F /* BackgroundInitial.swift in Sources */,
 				B6A74B9F29032E66001B5EAA /* ImageLoad.swift in Sources */,
 				B6A74B9729032A75001B5EAA /* AuthService.swift in Sources */,
+				B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */,
+				B63353402905CFAA006D0A5F /* ButtonLogin.swift in Sources */,
+				B67FDCAE2905ED7A00AD4F94 /* TabButton.swift in Sources */,
+				B67FDCAA2905EB7D00AD4F94 /* TabBarView.swift in Sources */,
 				B6A74B8C29032A6A001B5EAA /* AuthenticationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcylene.Lista-Mercado";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcylene.Lista-Mercado";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
