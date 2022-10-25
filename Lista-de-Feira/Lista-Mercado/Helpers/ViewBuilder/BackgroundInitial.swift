@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
     struct BackgroundInitial<Content: View>: View {
         let content: Content
         
@@ -18,10 +17,10 @@ import SwiftUI
             ZStack {
                 ZStack {
                     Circle()
-                        .setValueCircle(width: 200, height: 200, x: 150, y: 350)
+                        .setValueCircle(width: 150, height: 150, x: 50, y: 180)
                     
                     Circle()
-                        .setValueCircle(width: 300, height: 300, x: -150, y: -200)
+                        .setValueCircle(width: 200, height: 200, x: -120, y: -55)
                     
                     content
                 }

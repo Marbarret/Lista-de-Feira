@@ -13,10 +13,17 @@ struct SplashScreenView: View {
     
     var body: some View {
         BackgroundInitial {
-            VStack {
+            VStack(spacing: 10) {
+                Spacer()
                 LogoComponent()
                 
                 ButtonLogin()
+                
+                Text("Informações de Aplicativo")
+                    .font(.headline)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.theme.bluePrimary)
+                Spacer()
             }
         }
         .overlay(

@@ -10,20 +10,11 @@ import SwiftUI
 struct LogoComponent: View {
     var body: some View {
         HStack {
-            Image("lista-feira-2")
+            Image("logo-my-market")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 50)
-                .padding(.vertical, UIScreen.main.bounds.size.height / 10)
-            
-            Text("Lista Mercado")
-                .font(.title2)
-                .bold()
-                .foregroundColor(Color.theme.background)
-            + Text("\nControle")
-                .font(.subheadline)
-                .foregroundColor(Color.theme.gray)
-            
+                .frame(height: 80)
+                .padding(.vertical, UIScreen.main.bounds.size.height / 10)            
         }
     }
 }

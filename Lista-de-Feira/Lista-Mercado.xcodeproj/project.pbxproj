@@ -80,12 +80,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B63353472905D3F9006D0A5F /* Helpers */ = {
+		B63353472905D3F9006D0A5F /* ViewBuilder */ = {
 			isa = PBXGroup;
 			children = (
 				B63353482905D412006D0A5F /* BackgroundInitial.swift */,
 			);
-			path = Helpers;
+			path = ViewBuilder;
 			sourceTree = "<group>";
 		};
 		B63EA3F728FF707200081CAC = {
@@ -109,7 +109,7 @@
 			children = (
 				B6A74B9929032A7D001B5EAA /* Authenticated */,
 				B6A74B8629032A6A001B5EAA /* UnAuthenticated */,
-				B6A74B8F29032A75001B5EAA /* Resources */,
+				B6A74B8F29032A75001B5EAA /* Helpers */,
 				B63EA40528FF707200081CAC /* ContentView.swift */,
 				B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */,
 				B691430D29018C340034C5BA /* GoogleService-Info.plist */,
@@ -180,17 +180,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B6A74B8F29032A75001B5EAA /* Resources */ = {
+		B6A74B8F29032A75001B5EAA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				B67FDCB02905F11400AD4F94 /* Enums */,
-				B63353472905D3F9006D0A5F /* Helpers */,
+				B63353472905D3F9006D0A5F /* ViewBuilder */,
 				B63353422905D246006D0A5F /* Extensions */,
 				B6A74B9D29032E51001B5EAA /* Modifiers */,
 				B6A74B9029032A75001B5EAA /* Classes */,
 				B6A74B9329032A75001B5EAA /* Service */,
 			);
-			path = Resources;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B6A74B9029032A75001B5EAA /* Classes */ = {
