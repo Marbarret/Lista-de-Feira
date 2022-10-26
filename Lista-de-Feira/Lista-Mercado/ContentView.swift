@@ -1,0 +1,30 @@
+//
+//  ContentView.swift
+//  Lista-Mercado
+//
+//  Created by Marcylene Barreto on 18/10/22.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
+    var body: some View {
+        switch authViewModel.statusLogin {
+        case .signedIn: TabBarView()
+        case .signedOut: SplashScreenView()
+        case .unknown: ProgressView()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
