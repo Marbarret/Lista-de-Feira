@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ImageLoad: ViewModifier {
-    
     var width: CGFloat
     var height: CGFloat
     
@@ -22,6 +21,4 @@ struct ImageLoad: ViewModifier {
             .frame(width: self.width, height: self.height)
             .scaledToFit()
     }
-    
 }
-

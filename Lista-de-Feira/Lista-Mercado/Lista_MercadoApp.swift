@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct Lista_MercadoApp: App {
-   
     private var authService: AuthServiceProtocol
     private var initialViewModel: AuthenticationViewModel
     

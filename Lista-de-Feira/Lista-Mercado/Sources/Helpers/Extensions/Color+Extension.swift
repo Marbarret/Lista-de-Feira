@@ -16,10 +16,6 @@ struct ColorTheme {
     let background = Color("background")
     let bluePrimary = Color("color-1")
     let gray = Color("color-gray")
-    let blackPrimary = Color("black-primary")
-    let alert = Color("alert")
-    let warning = Color("warning")
-    let darkGray = Color("darkGray")
 }
 
 struct XcodeColors {
