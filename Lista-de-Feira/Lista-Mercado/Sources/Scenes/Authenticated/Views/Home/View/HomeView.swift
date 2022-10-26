@@ -16,13 +16,20 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 ProfileComponent(name: homeViewModel.user?.givenName ?? "", photo: homeViewModel.user?.imgUser)
+                HStack {
+                    ShapeComponent()
+                }
+                .padding(.top, -70)
                 
+                ExplorerComponent()
                 Spacer()
                 
                 Text("profile usuario")
             }
+            .edgesIgnoringSafeArea(.all)
+            .statusBar(hidden: true)
         }
     }
 }

@@ -13,17 +13,21 @@ struct ProfileComponent: View {
     let photo: URL?
     
     var body: some View {
-        HStack(spacing: 30) {
-            Text("Hello!")
-                .font(.subheadline)
-            + Text("\n\(name)")
-                .font(.custom("OpenSans-Bold", size: 22))
-                .bold()
+        HStack {
+            Text("Hello, \(name)")
+                .font(.title)
+                .fontWeight(.light)
+                .foregroundColor(.white)
             
             Spacer()
+            
             buttonProfileUser
-        }
+            
+        }//HStack
         .padding(.horizontal)
+        .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 10)
+        .padding(.bottom, 100)
+        .background(Color.theme.bluePrimary)
     }
 }
 
