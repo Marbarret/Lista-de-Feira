@@ -14,6 +14,13 @@
 		B63EA40628FF707200081CAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EA40528FF707200081CAC /* ContentView.swift */; };
 		B63EA40828FF707600081CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63EA40728FF707600081CAC /* Assets.xcassets */; };
 		B63EA40B28FF707600081CAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B63EA40A28FF707600081CAC /* Preview Assets.xcassets */; };
+		B63FB92F29087D0800BCC7FB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB92E29087D0800BCC7FB /* ProfileView.swift */; };
+		B63FB93629087D3300BCC7FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB93529087D3300BCC7FB /* HomeView.swift */; };
+		B63FB93C29087D5B00BCC7FB /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB93B29087D5B00BCC7FB /* OverviewView.swift */; };
+		B63FB94629087F2600BCC7FB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB94529087F2600BCC7FB /* UserModel.swift */; };
+		B63FB94A29087F8200BCC7FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB94929087F8200BCC7FB /* HomeViewModel.swift */; };
+		B63FB94F2908815700BCC7FB /* ProfileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB94E2908815700BCC7FB /* ProfileComponent.swift */; };
+		B63FB95B2908894200BCC7FB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B63FB95A2908894200BCC7FB /* Kingfisher */; };
 		B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */; };
 		B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */; };
 		B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */; };
@@ -42,6 +49,12 @@
 		B63EA40728FF707600081CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B63EA40A28FF707600081CAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B63EA40C28FF707600081CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B63FB92E29087D0800BCC7FB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B63FB93529087D3300BCC7FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B63FB93B29087D5B00BCC7FB /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		B63FB94529087F2600BCC7FB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B63FB94929087F8200BCC7FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B63FB94E2908815700BCC7FB /* ProfileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponent.swift; sourceTree = "<group>"; };
 		B67FDC9B2905DFDE00AD4F94 /* LogoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoComponent.swift; sourceTree = "<group>"; };
 		B67FDC9F2905E0B200AD4F94 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModifier.swift; sourceTree = "<group>"; };
@@ -62,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63FB95B2908894200BCC7FB /* Kingfisher in Frameworks */,
 				B69142FD2901831C0034C5BA /* GoogleSignIn in Frameworks */,
 				B6914303290185E60034C5BA /* FirebaseAuth in Frameworks */,
 				B69142FF2901831C0034C5BA /* GoogleSignInSwift in Frameworks */,
@@ -107,9 +121,8 @@
 		B63EA40228FF707200081CAC /* Lista-Mercado */ = {
 			isa = PBXGroup;
 			children = (
-				B6A74B9929032A7D001B5EAA /* Authenticated */,
-				B6A74B8629032A6A001B5EAA /* UnAuthenticated */,
-				B6A74B8F29032A75001B5EAA /* Helpers */,
+				B63FB91A2908722B00BCC7FB /* Resources */,
+				B63FB9192908722200BCC7FB /* Sources */,
 				B63EA40528FF707200081CAC /* ContentView.swift */,
 				B63EA40328FF707200081CAC /* Lista_MercadoApp.swift */,
 				B691430D29018C340034C5BA /* GoogleService-Info.plist */,
@@ -128,6 +141,143 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B63FB9192908722200BCC7FB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB91B2908724600BCC7FB /* Scenes */,
+				B63FB91E2908727100BCC7FB /* Custom Views */,
+				B63FB91D2908726900BCC7FB /* Model */,
+				B63FB91C2908726100BCC7FB /* Service */,
+				B6A74B8F29032A75001B5EAA /* Helpers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B63FB91A2908722B00BCC7FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B63FB91B2908724600BCC7FB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B6A74B8629032A6A001B5EAA /* UnAuthenticated */,
+				B6A74B9929032A7D001B5EAA /* Authenticated */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B63FB91C2908726100BCC7FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B6A74B9429032A75001B5EAA /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B63FB91D2908726900BCC7FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB94529087F2600BCC7FB /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B63FB91E2908727100BCC7FB /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6A74B9E29032E65001B5EAA /* ImageLoad.swift */,
+				B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B63FB91F290872CD00BCC7FB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6A74B9229032A75001B5EAA /* Application.swift */,
+				B6A74B9129032A75001B5EAA /* AppDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B63FB9202908731C00BCC7FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB92D29087BCD00BCC7FB /* Overview */,
+				B63FB92C29087BC600BCC7FB /* Profile */,
+				B63FB92B29087BBE00BCC7FB /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B63FB9252908798F00BCC7FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B63FB92B29087BBE00BCC7FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB94829087F7000BCC7FB /* ViewModel */,
+				B63FB93F29087E6E00BCC7FB /* Component */,
+				B63FB93329087D2700BCC7FB /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B63FB92C29087BC600BCC7FB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB93829087D3D00BCC7FB /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B63FB92D29087BCD00BCC7FB /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB93B29087D5B00BCC7FB /* OverviewView.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		B63FB93329087D2700BCC7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB93529087D3300BCC7FB /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B63FB93829087D3D00BCC7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB92E29087D0800BCC7FB /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B63FB93F29087E6E00BCC7FB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB94E2908815700BCC7FB /* ProfileComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B63FB94829087F7000BCC7FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B63FB94929087F8200BCC7FB /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B67FDC9A2905DFB100AD4F94 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +289,7 @@
 		B67FDCA82905EB6700AD4F94 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				B63FB9252908798F00BCC7FB /* ViewModel */,
 				B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */,
 				B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */,
 			);
@@ -183,50 +334,23 @@
 		B6A74B8F29032A75001B5EAA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B63FB91F290872CD00BCC7FB /* Utils */,
 				B67FDCB02905F11400AD4F94 /* Enums */,
 				B63353472905D3F9006D0A5F /* ViewBuilder */,
 				B63353422905D246006D0A5F /* Extensions */,
-				B6A74B9D29032E51001B5EAA /* Modifiers */,
-				B6A74B9029032A75001B5EAA /* Classes */,
-				B6A74B9329032A75001B5EAA /* Service */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		B6A74B9029032A75001B5EAA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B6A74B9129032A75001B5EAA /* AppDelegate.swift */,
-				B6A74B9229032A75001B5EAA /* Application.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		B6A74B9329032A75001B5EAA /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				B6A74B9429032A75001B5EAA /* AuthService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		B6A74B9929032A7D001B5EAA /* Authenticated */ = {
 			isa = PBXGroup;
 			children = (
+				B63FB9202908731C00BCC7FB /* Views */,
 				B67FDCA82905EB6700AD4F94 /* Tab Bar */,
 			);
 			name = Authenticated;
-			path = "Lista-Mercado/Authenticated";
+			path = "Lista-Mercado/Sources/Scenes/Authenticated";
 			sourceTree = SOURCE_ROOT;
-		};
-		B6A74B9D29032E51001B5EAA /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				B6A74B9E29032E65001B5EAA /* ImageLoad.swift */,
-				B67FDCA32905E12D00AD4F94 /* CircleModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -248,6 +372,7 @@
 				B69142FC2901831C0034C5BA /* GoogleSignIn */,
 				B69142FE2901831C0034C5BA /* GoogleSignInSwift */,
 				B6914302290185E60034C5BA /* FirebaseAuth */,
+				B63FB95A2908894200BCC7FB /* Kingfisher */,
 			);
 			productName = "Lista-Mercado";
 			productReference = B63EA40028FF707200081CAC /* Lista-Mercado.app */;
@@ -279,6 +404,7 @@
 			packageReferences = (
 				B69142FB2901831C0034C5BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B6914301290185E60034C5BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B63FB9592908894200BCC7FB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B63EA40128FF707200081CAC /* Products */;
 			projectDirPath = "";
@@ -310,13 +436,18 @@
 				B6A74B9629032A75001B5EAA /* Application.swift in Sources */,
 				B63353442905D25E006D0A5F /* Color+Extension.swift in Sources */,
 				B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */,
+				B63FB93C29087D5B00BCC7FB /* OverviewView.swift in Sources */,
 				B67FDCB22905F12900AD4F94 /* Status.swift in Sources */,
+				B63FB94F2908815700BCC7FB /* ProfileComponent.swift in Sources */,
+				B63FB94A29087F8200BCC7FB /* HomeViewModel.swift in Sources */,
 				B6A74B9529032A75001B5EAA /* AppDelegate.swift in Sources */,
 				B67FDCA42905E12D00AD4F94 /* CircleModifier.swift in Sources */,
 				B6A74B8D29032A6A001B5EAA /* SplashScreenView.swift in Sources */,
 				B63EA40628FF707200081CAC /* ContentView.swift in Sources */,
+				B63FB94629087F2600BCC7FB /* UserModel.swift in Sources */,
 				B63EA40428FF707200081CAC /* Lista_MercadoApp.swift in Sources */,
 				B63353492905D412006D0A5F /* BackgroundInitial.swift in Sources */,
+				B63FB92F29087D0800BCC7FB /* ProfileView.swift in Sources */,
 				B6A74B9F29032E66001B5EAA /* ImageLoad.swift in Sources */,
 				B6A74B9729032A75001B5EAA /* AuthService.swift in Sources */,
 				B67FDCA02905E0B200AD4F94 /* View+Extension.swift in Sources */,
@@ -324,6 +455,7 @@
 				B67FDCAE2905ED7A00AD4F94 /* TabButton.swift in Sources */,
 				B67FDCAA2905EB7D00AD4F94 /* TabBarView.swift in Sources */,
 				B6A74B8C29032A6A001B5EAA /* AuthenticationViewModel.swift in Sources */,
+				B63FB93629087D3300BCC7FB /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +587,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lista-Mercado/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Lista-Mercado/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +608,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lista-Mercado/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Lista-Mercado/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,6 +644,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B63FB9592908894200BCC7FB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.3.1;
+			};
+		};
 		B69142FB2901831C0034C5BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -531,6 +671,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B63FB95A2908894200BCC7FB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B63FB9592908894200BCC7FB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		B69142FC2901831C0034C5BA /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B69142FB2901831C0034C5BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;

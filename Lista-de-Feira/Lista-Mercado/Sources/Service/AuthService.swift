@@ -15,6 +15,7 @@ protocol AuthServiceProtocol {
     func signOut() -> Bool
     func checkSignIn() -> Bool
     func loadSignUser(completion: @escaping (Result<Bool, Error>) -> Void)
+    func getUser() -> UserModel?
 }
 
 class AuthService: AuthServiceProtocol {
@@ -60,10 +61,10 @@ class AuthService: AuthServiceProtocol {
         }
     }
     
-//    func getUser() -> UserModel? {
-//        guard let user = GIDSignIn.sharedInstance.currentUser else {return nil}
-//        return UserModel(givenName: user.profile?.givenName, email: user.profile?.email, imgUser: user.profile?.imageURL(withDimension: 200))
-//    }
+    func getUser() -> UserModel? {
+        guard let user = GIDSignIn.sharedInstance.currentUser else {return nil}
+        return UserModel(givenName: user.profile?.givenName, email: user.profile?.email, imgUser: user.profile?.imageURL(withDimension: 200))
+    }
     
     func signOut() -> Bool {
         GIDSignIn.sharedInstance.signOut()

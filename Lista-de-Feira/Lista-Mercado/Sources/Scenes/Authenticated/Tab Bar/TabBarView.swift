@@ -14,13 +14,13 @@ struct TabBarView: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             
             TabView(selection: $current) {
-                Text("Home")
+                HomeView(homeViewModel: .init(authService: AuthService()))
                     .tag("Home")
                 
-                Text("Carteira")
+                OverviewView()
                     .tag("Carteira")
                 
-                Text("Perfil")
+                ProfileView()
                     .tag("Perfil")
             }
             
