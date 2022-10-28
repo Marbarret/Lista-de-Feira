@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    
     @ObservedObject var homeViewModel: HomeViewModel
+    
     init(homeViewModel: HomeViewModel) {
         _homeViewModel = ObservedObject(wrappedValue: homeViewModel)
     }
@@ -22,11 +24,9 @@ struct HomeView: View {
                     ShapeComponent()
                 }
                 .padding(.top, -70)
-                
                 ExplorerComponent()
                 Spacer()
                 
-                Text("profile usuario")
             }
             .edgesIgnoringSafeArea(.all)
             .statusBar(hidden: true)

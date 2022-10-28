@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ExplorerComponent: View {
+    var months = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"]
     
     @State var index = 0
     
     var body: some View {
         ZStack {
-            Color(.cyan)
-            
             VStack {
                 HStack {
                     Text("Mês desejado")
@@ -22,7 +21,7 @@ struct ExplorerComponent: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {}, label: {
                         Image(systemName: "ellipsis")
                             .font(.title)
                     })
@@ -34,29 +33,10 @@ struct ExplorerComponent: View {
                 .padding(.trailing)
                 
                 // MARK: - Scrollview com meses
-
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 25) {
-                        VStack(spacing: 12) {
-                            Image(systemName: "calendar")
-                                .font(.title)
-                                .foregroundColor(Color.theme.bluePrimary)
-                                .padding()
-                                .background(Color.white)
-                                .clipShape(Circle())
-                            
-                            Text("Mês")
-                                .foregroundColor(self.index == 0 ? .white : .black)
-                        }// VStack
-                        .padding(.horizontal, 5)
-                        .padding(.vertical, 30)
-                        .background(self.index == 0 ? Color.theme.background : Color.theme.background.opacity(0.06))
-                        .clipShape(Capsule())
-                        .onTapGesture {
-                            self.index = 0
-                        }
-                    }// HStack
-                    .padding(.horizontal, 25)
+                    HStack {
+                        mesesTesteVisual1
+                    }
                 }// ScrollView
                 .padding(.top, 25)
                 
@@ -74,3 +54,27 @@ struct ExplorerComponent_Previews: PreviewProvider {
         ExplorerComponent()
     }
 }
+
+extension ExplorerComponent {
+    private var mesesTesteVisual1: some View {
+        HStack(spacing: 25) {
+            
+            ForEach(months, id: \.self) { mes in
+                VStack(spacing: 12) {
+                    Text(mes)
+                        .foregroundColor(self.index == 0 ? .white : .black)
+                }// VStack
+            }// ForEach
+            .padding(.horizontal, 5)
+            .padding(.vertical, 30)
+            .background(self.index == 0 ? Color.theme.background : Color.theme.background.opacity(0.06))
+            .clipShape(Capsule())
+            .onTapGesture {
+                self.index = 0
+            }
+        }// HStack
+        .padding(.horizontal, 15)
+    }
+}
+
+

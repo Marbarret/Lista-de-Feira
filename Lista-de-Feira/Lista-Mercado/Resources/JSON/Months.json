@@ -1,0 +1,62 @@
+[
+   {
+      "id":"0",
+      "month": "Janeiro",
+      "abbreviation": "JAN"
+   },
+   {
+      "id":"1",
+      "month": "Fevereiro",
+      "abbreviation": "FEV"
+   },
+   {
+      "id":"2",
+      "month": "Março",
+      "abbreviation": "MAR"
+   },
+   {
+      "id":"3",
+      "month": "Abril",
+      "abbreviation": "ABR"
+   },
+   {
+      "id":"4",
+      "month": "Maio",
+      "abbreviation": "MAI"
+   },
+   {
+      "id":"5",
+      "month": "Junho",
+      "abbreviation": "JUN"
+   },
+   {
+      "id":"6",
+      "month": "Julho",
+      "abbreviation": "JUL"
+   },
+   {
+      "id":"7",
+      "month": "Agosto",
+      "abbreviation": "AGO"
+   },
+   {
+      "id":"8",
+      "month": "Setembro",
+      "abbreviation": "SET"
+   },
+   {
+      "id":"9",
+      "month": "Outubro",
+      "abbreviation": "OUT"
+   },
+   {
+      "id":"10",
+      "month": "Novembro",
+      "abbreviation": "NOV"
+   },
+   {
+      "id":"11",
+      "month": "Dezembro",
+      "abbreviation": "DEZ"
+   }
+]

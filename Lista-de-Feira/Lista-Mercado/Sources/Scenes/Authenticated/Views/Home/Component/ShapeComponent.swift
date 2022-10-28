@@ -20,7 +20,7 @@ struct ShapeComponent: View {
                     
                     Spacer()
                     VStack(alignment: .leading) {
-                        Text("Gastos mês atual")
+                        Text("Gasto mês atual")
                             .font(.caption)
                             .fontWeight(.light)
                         
@@ -29,8 +29,12 @@ struct ShapeComponent: View {
                             .fontWeight(.bold)
                     }// VStack
                     Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.body)
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "chevron.right")
+                            .font(.body)
+                            .foregroundColor(Color.theme.bluePrimary)
+                    })
                     
                 }// HStack
                 .padding()
