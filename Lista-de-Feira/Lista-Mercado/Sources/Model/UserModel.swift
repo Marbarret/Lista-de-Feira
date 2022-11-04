@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel:  Identifiable {
+struct UserModel: Hashable, Identifiable {
     var givenName,
         email: String?
     var imgUser: URL?

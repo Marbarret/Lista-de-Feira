@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    
     @ObservedObject var homeViewModel: HomeViewModel
+    @State private var showNewList: Bool = false
     
     init(homeViewModel: HomeViewModel) {
         _homeViewModel = ObservedObject(wrappedValue: homeViewModel)
@@ -18,18 +17,48 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                ProfileComponent(name: homeViewModel.user?.givenName ?? "", photo: homeViewModel.user?.imgUser)
-                HStack {
-                    ShapeComponent()
-                }
-                .padding(.top, -70)
-                ExplorerComponent()
-                Spacer()
-                
+            ZStack {
+                VStack(spacing: 0) {
+                    // MARK: - Profile User
+                    ProfileComponent(name: homeViewModel.user?.givenName ?? "", photo: homeViewModel.user?.imgUser)
+                    
+                    // MARK: - Shape Value
+                    HStack {
+                        ShapeComponent()
+                    }// HStack
+                    .padding(.top, -70)
+                    
+                    // MARK: - Shape Date
+                    ExplorerComponent()
+                    
+                    // MARK: - Buttons
+                    //                ScrollView(.vertical, showsIndicators: false) {
+                    HStack(spacing: 15) {
+                       
+
+                    }// HStack
+                    .padding(.vertical, 25)
+                    //                }// ScrollView
+                    .padding(.top, -60)
+                    
+                    if showNewList {
+                        BlankView()
+                            .onTapGesture {
+                                withAnimation() {
+                                    showNewList = false
+                                }
+                            }
+                        CreateNewList()
+                    }
+                    
+                }// VStack
+                .edgesIgnoringSafeArea(.all)
+                .statusBar(hidden: true)
+            }// ZStack
+            .onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
             }
-            .edgesIgnoringSafeArea(.all)
-            .statusBar(hidden: true)
-        }
+        }// NavigationView
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

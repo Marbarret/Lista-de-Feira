@@ -16,15 +16,9 @@ struct ContentView: View {
     
     var body: some View {
         switch authViewModel.statusLogin {
-        case .signedIn: TabBarView()
+        case .signedIn: InitialView(homeViewModel: .init(authService: AuthService()))
         case .signedOut: SplashScreenView()
         case .unknown: ProgressView()
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

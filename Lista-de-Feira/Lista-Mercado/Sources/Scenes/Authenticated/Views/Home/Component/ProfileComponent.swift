@@ -14,20 +14,15 @@ struct ProfileComponent: View {
     
     var body: some View {
         HStack {
-            Text("Hello, \(name)")
-                .font(.title)
-                .fontWeight(.light)
-                .foregroundColor(.white)
-            
-            Spacer()
-            
             buttonProfileUser
             
+            Text("Hello, \(name)")
+                .font(.title3)
+                .fontWeight(.light)
+                .foregroundColor(.black)
+    
         }//HStack
         .padding(.horizontal)
-        .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 10)
-        .padding(.bottom, 100)
-        .background(Color.theme.bluePrimary)
     }
 }
 

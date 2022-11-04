@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExplorerComponent: View {
     var months = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"]
-    
+        
     @State var index = 0
     
     var body: some View {
@@ -27,7 +27,7 @@ struct ExplorerComponent: View {
                     })
                     
                 } // HStack
-                .foregroundColor(Color.theme.bluePrimary)
+                .foregroundColor(Color.white)
                 .padding(.leading, 35)
                 .padding(.top, 35)
                 .padding(.trailing)
@@ -43,8 +43,7 @@ struct ExplorerComponent: View {
                 Spacer()
                 
             }// VStack
-            .background(Color.white)
-//            .clipShape(Corners(corner: [.topLeft], size: CGSize(width: 70, height: 70)))
+            .background(Color.theme.bluePrimary)
         }// ZStack
     }
 }
@@ -58,12 +57,12 @@ struct ExplorerComponent_Previews: PreviewProvider {
 extension ExplorerComponent {
     private var mesesTesteVisual1: some View {
         HStack(spacing: 25) {
-            
             ForEach(months, id: \.self) { mes in
-                VStack(spacing: 12) {
+                let destinationView = OverviewView()
+                NavigationLink(destination: destinationView) {
                     Text(mes)
                         .foregroundColor(self.index == 0 ? .white : .black)
-                }// VStack
+                }// NavigationLink
             }// ForEach
             .padding(.horizontal, 5)
             .padding(.vertical, 30)
