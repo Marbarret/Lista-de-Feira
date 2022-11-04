@@ -38,9 +38,8 @@ struct ExplorerComponent: View {
                         mesesTesteVisual1
                     }
                 }// ScrollView
-                .padding(.top, 25)
-                
-                Spacer()
+                .padding(.top, 8)
+                .padding(.bottom, 5)
                 
             }// VStack
             .background(Color.theme.bluePrimary)
@@ -56,7 +55,7 @@ struct ExplorerComponent_Previews: PreviewProvider {
 
 extension ExplorerComponent {
     private var mesesTesteVisual1: some View {
-        HStack(spacing: 25) {
+        HStack(spacing: 15) {
             ForEach(months, id: \.self) { mes in
                 let destinationView = OverviewView()
                 NavigationLink(destination: destinationView) {
@@ -64,9 +63,9 @@ extension ExplorerComponent {
                         .foregroundColor(self.index == 0 ? .white : .black)
                 }// NavigationLink
             }// ForEach
-            .padding(.horizontal, 5)
-            .padding(.vertical, 30)
-            .background(self.index == 0 ? Color.theme.background : Color.theme.background.opacity(0.06))
+            .padding(.horizontal, 15)
+            .padding(.vertical, 5)
+            .background(self.index == 0 ? Color.theme.blueSecondary : Color.theme.blueSecondary.opacity(0.06))
             .clipShape(Capsule())
             .onTapGesture {
                 self.index = 0

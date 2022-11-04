@@ -25,13 +25,13 @@ struct ItemPurchases: View {
                     .font(.footnote)
                     .opacity(0.7)
                     .lineLimit(1)
-            }
+            }// VStack
             
             Spacer()
             
             Text("\(item.price)")
                 .bold()
-        }
+        }// HStack
         .padding()
         .padding([.top, .bottom], 6)
     }

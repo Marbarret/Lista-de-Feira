@@ -18,5 +18,8 @@ var purchase: [ItemModel] = [
     ItemModel(productName: "Arroz Branco", brandName: "Fazenda", price: 23.4),
     ItemModel(productName: "Feijão", brandName: "Tio João", price: 3),
     ItemModel(productName: "Açucar", brandName: "Fazenda", price: 4.54),
+    ItemModel(productName: "Papel Toalha", brandName: "Neve", price: 4.80),
+    ItemModel(productName: "Papel Toalha", brandName: "Neve", price: 4.80),
+    ItemModel(productName: "Papel Toalha", brandName: "Neve", price: 4.80),
     ItemModel(productName: "Papel Toalha", brandName: "Neve", price: 4.80)
 ]

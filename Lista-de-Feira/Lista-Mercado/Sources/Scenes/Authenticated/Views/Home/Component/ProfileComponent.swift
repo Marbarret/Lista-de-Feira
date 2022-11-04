@@ -16,13 +16,12 @@ struct ProfileComponent: View {
         HStack {
             buttonProfileUser
             
-            Text("Hello, \(name)")
+            Text("Hello,")
+                .font(.footnote)
+            + Text("\n\(name)")
                 .font(.title3)
-                .fontWeight(.light)
-                .foregroundColor(.black)
-    
+
         }//HStack
-        .padding(.horizontal)
     }
 }
 

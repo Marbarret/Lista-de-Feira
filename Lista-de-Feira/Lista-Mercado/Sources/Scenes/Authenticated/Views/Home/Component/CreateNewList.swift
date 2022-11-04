@@ -33,7 +33,7 @@ struct CreateNewList: View {
                         .foregroundColor(.white)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(isButtonDisabled ? Color.theme.gray : Color.theme.background)
+                        .background(isButtonDisabled ? Color.theme.blueSecondary : Color.theme.background)
                         .cornerRadius(10)
                 })
             }// VStack

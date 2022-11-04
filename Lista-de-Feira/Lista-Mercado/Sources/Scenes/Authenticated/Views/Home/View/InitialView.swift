@@ -10,7 +10,7 @@ import SwiftUI
 struct InitialView: View {
     @State private var showNewList: Bool = false
     @ObservedObject var homeViewModel: HomeViewModel
-
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -33,34 +33,50 @@ struct InitialView: View {
                     Spacer(minLength: 80)
                     
                     // MARK: - Add List
-                    
-                    Button {
-                        showNewList = true
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                    HStack {
+                        // MARK: - Button Information Value
                         
-                        Text("New List")
-                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                    }// Button
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 15)
-                    .background(Color.theme.background)
-                    .cornerRadius(10)
-                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            ShapeComponent(titleButton: "R$ 2.999", subTitle: "Gasto do mes", image: "chevron.right")
+                        })
+                        
+                        // MARK: - Button New List
+                        
+                        Button {
+                            showNewList = true
+                        } label: {
+                            HStack {
+                                Text("New List")
+                                    .font(.title3)
+                                
+                                Spacer()
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(Color.theme.background)
+                            }// HStack
+                            .foregroundColor(Color.theme.background)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 17)
+                            .background(Color.theme.blueSecondary)
+                            .clipShape(Corners(corner: [.topRight, .bottomRight], size: CGSize(width: 10, height: 10)))
+                            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
+                        }// Button
+                    }// HStack
+                    .padding()
+                    .padding(.top, -80)
                     
                     ExplorerComponent()
-//                     MARK: - List
+                    // MARK: - List
                     List {
                         ForEach(purchase) { item in
                             ItemPurchases(item: item)
-                        }
-                    }//: List
-                    .listStyle(InsetGroupedListStyle())
+                        }// ForEach
+                    }// List
+                    .listStyle(PlainListStyle())
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
                     .padding(.vertical, 0)
-                    .frame(maxWidth: 640)
+                    .clipShape(Corners(corner: [.topRight, .topLeft, .bottomLeft, .bottomRight], size: CGSize(width: 10, height: 10)))
+                    .padding()
                 }// VStack
                 .blur(radius: showNewList ? 8.0 : 0, opaque: false)
                 .transition(.move(edge: .bottom))
@@ -76,7 +92,6 @@ struct InitialView: View {
                         }
                     CreateNewList()
                 }
-                
             }// ZStack
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor.clear
