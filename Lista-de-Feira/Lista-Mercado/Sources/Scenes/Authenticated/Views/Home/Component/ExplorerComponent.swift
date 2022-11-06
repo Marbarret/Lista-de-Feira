@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ExplorerComponent: View {
     var months = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"]
-        
+    
+    let userList: ListsUser
     @State var index = 0
     
     var body: some View {
@@ -49,7 +50,7 @@ struct ExplorerComponent: View {
 
 struct ExplorerComponent_Previews: PreviewProvider {
     static var previews: some View {
-        ExplorerComponent()
+        ExplorerComponent(userList: ListsUser(title: "Setembro", month: "12/09/2022"))
     }
 }
 
@@ -57,7 +58,7 @@ extension ExplorerComponent {
     private var mesesTesteVisual1: some View {
         HStack(spacing: 15) {
             ForEach(months, id: \.self) { mes in
-                let destinationView = OverviewView()
+                let destinationView = OverviewView(listUser: userList)
                 NavigationLink(destination: destinationView) {
                     Text(mes)
                         .foregroundColor(self.index == 0 ? .white : .black)

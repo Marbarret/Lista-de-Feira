@@ -10,6 +10,7 @@ import SwiftUI
 struct InitialView: View {
     @State private var showNewList: Bool = false
     @ObservedObject var homeViewModel: HomeViewModel
+    @StateObject var listVM: ItemListViewModel = ItemListViewModel()
     
     var body: some View {
         NavigationView {
@@ -29,8 +30,6 @@ struct InitialView: View {
                     }// HStack
                     .padding()
                     .foregroundColor(.white)
-                    
-                    Spacer(minLength: 80)
                     
                     // MARK: - Add List
                     HStack {
@@ -63,20 +62,21 @@ struct InitialView: View {
                         }// Button
                     }// HStack
                     .padding()
-                    .padding(.top, -80)
+                    .padding(.top, -30)
                     
-                    ExplorerComponent()
+                    ExplorerComponent(userList: ListsUser(title: "Setembro", month: ""))
+                    
                     // MARK: - List
-                    List {
-                        ForEach(purchase) { item in
-                            ItemPurchases(item: item)
+                    VStack(spacing: 2) {
+                        ForEach(listVM.listUser) { item in
+                            ListComponent(nameList: item.title, date: item.month)
                         }// ForEach
-                    }// List
-                    .listStyle(PlainListStyle())
-                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
-                    .padding(.vertical, 0)
-                    .clipShape(Corners(corner: [.topRight, .topLeft, .bottomLeft, .bottomRight], size: CGSize(width: 10, height: 10)))
-                    .padding()
+                    }
+                    .padding(.top, 8)
+                    .padding(.bottom, 5)
+                    
+                    Spacer()
+                    
                 }// VStack
                 .blur(radius: showNewList ? 8.0 : 0, opaque: false)
                 .transition(.move(edge: .bottom))
@@ -103,6 +103,7 @@ struct InitialView: View {
             )
         }// NavigationView
         .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(listVM)
     }
 }
 

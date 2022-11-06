@@ -7,11 +7,28 @@
 
 import Foundation
 
-struct ItemModel: Identifiable {
-    let id: String = UUID().uuidString
-    let productName: String
-    let brandName: String
-    let price: Double
+struct ListsUser: Identifiable {
+    var id: String = UUID().uuidString
+    let title: String
+    let month: String
+}
+
+struct ItemModel: Identifiable, Codable {
+    var id: String = UUID().uuidString
+    var productName: String
+    var brandName: String
+    var price: Double
+    
+    init(id: String = UUID().uuidString, productName: String, brandName: String, price: Double) {
+        self.id = id
+        self.productName = productName
+        self.brandName = brandName
+        self.price = price
+    }
+    
+    func updateItem() -> ItemModel {
+        return ItemModel(productName: productName, brandName: brandName, price: price)
+    }
 }
 
 var purchase: [ItemModel] = [

@@ -17,8 +17,8 @@ struct TabBarView: View {
                 InitialView(homeViewModel: .init(authService: AuthService()))
                     .tag("Home")
                 
-                OverviewView()
-                    .tag("Carteira")
+//                OverviewView()
+//                    .tag("Carteira")
                 
                 ProfileView()
                     .tag("Perfil")

@@ -31,6 +31,21 @@ struct ItemPurchases: View {
             
             Text("\(item.price)")
                 .bold()
+            
+            VStack(spacing: 5) {
+                Button(action: {}) {
+                    Image(systemName: "square.and.pencil")
+                        .font(.body)
+                        .foregroundColor(Color.theme.blueSecondary)
+                }
+                
+                Button(action: {}) {
+                    Image(systemName: "trash")
+                        .font(.body)
+                        .foregroundColor(Color.theme.blueSecondary)
+                }
+            }
+            
         }// HStack
         .padding()
         .padding([.top, .bottom], 6)

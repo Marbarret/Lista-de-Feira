@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct OverviewView: View {
-
+    let listUser: ListsUser
+    
     var body: some View {
         NavigationView {
-            List {
+            VStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(listUser.title)
+                        .font(.title)
+                    
+                    Text(listUser.month)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                }
+                
                 ForEach(purchase) { item in
                     ItemPurchases(item: item)
                 }
@@ -25,6 +35,6 @@ struct OverviewView: View {
 
 struct OverviewView_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewView()
+        OverviewView(listUser: ListsUser(title: "Setembro", month: "12/09/2022"))
     }
 }
