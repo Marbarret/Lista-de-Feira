@@ -103,6 +103,7 @@ struct InitialView: View {
             )
         }// NavigationView
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarHidden(true)
         .environmentObject(listVM)
     }
 }

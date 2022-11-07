@@ -16,10 +16,15 @@ struct ProfileComponent: View {
         HStack {
             buttonProfileUser
             
-            Text("Hello,")
-                .font(.footnote)
-            + Text("\n\(name)")
-                .font(.title3)
+            VStack {
+                Text("Hello,")
+                    .font(.footnote)
+                + Text("\n\(name)")
+                    .font(.title3)
+            }
+            Spacer()
+            
+            buttonSideMenu
 
         }//HStack
     }
@@ -36,6 +41,17 @@ extension ProfileComponent {
                 .frame(width: 50, height: 50)
         }
         .padding()
-        .shadow(color: Color.theme.gray.opacity(0.2), radius: 5, x: 0, y: 2)
+    }
+    
+    private var buttonSideMenu: some View {
+        Button {
+            print("Clique no Menu")
+        } label: {
+            Image(systemName: "text.justify")
+                .resizable()
+                .foregroundColor(Color.theme.gray)
+                .frame(width: 22, height: 22)
+        }
+        .padding()
     }
 }
