@@ -9,24 +9,13 @@ import SwiftUI
 
 extension Color {
     static let theme = ColorTheme()
-    static let xcodeColors = XcodeColors()
 }
 
 struct ColorTheme {
-    let background = Color("background")
+    let primaryColor = Color("primaryColor")
+    let secondaryColor = Color("color-secondary")
     let bluePrimary = Color("color-1")
     let blueSecondary = Color("color-2")
+    let blueTerc = Color("color-3")
     let gray = Color("color-gray")
-}
-
-struct XcodeColors {
-    let background = Color("bg-class")
-    let lineNumber = Color("lineNumber")
-    let text = Color("text")
-    let structWord = Color("structWord")
-    let typeWord = Color("typeWord")
-    let brace = Color("brace")
-    let literalString = Color("literalString")
-    let number = Color("number")
-    let comment = Color("comment")
 }

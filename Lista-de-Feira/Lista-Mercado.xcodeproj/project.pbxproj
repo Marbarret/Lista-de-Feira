@@ -46,6 +46,7 @@
 		B6914303290185E60034C5BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6914302290185E60034C5BA /* FirebaseAuth */; };
 		B691430E29018C340034C5BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B691430D29018C340034C5BA /* GoogleService-Info.plist */; };
 		B692F2582915BBC3003E7311 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692F2572915BBC3003E7311 /* ItemListViewModel.swift */; };
+		B6A496ED291B0251006EA970 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A496EC291B0251006EA970 /* MainView.swift */; };
 		B6A74B8C29032A6A001B5EAA /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A74B8829032A6A001B5EAA /* AuthenticationViewModel.swift */; };
 		B6A74B8D29032A6A001B5EAA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A74B8A29032A6A001B5EAA /* SplashScreenView.swift */; };
 		B6A74B9529032A75001B5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A74B9129032A75001B5EAA /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		B67FDCB12905F12900AD4F94 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		B691430D29018C340034C5BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B692F2572915BBC3003E7311 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		B6A496EC291B0251006EA970 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B6A74B8829032A6A001B5EAA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B6A74B8A29032A6A001B5EAA /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		B6A74B9129032A75001B5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 		B67FDCA82905EB6700AD4F94 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				B6A496EC291B0251006EA970 /* MainView.swift */,
 				B67FDCA92905EB7D00AD4F94 /* TabBarView.swift */,
 				B67FDCAD2905ED7A00AD4F94 /* TabButton.swift */,
 				B66DB16929187DC20064673B /* SideMenu.swift */,
@@ -500,6 +503,7 @@
 				B63353442905D25E006D0A5F /* Color+Extension.swift in Sources */,
 				B67FDC9C2905DFDE00AD4F94 /* LogoComponent.swift in Sources */,
 				B692F2582915BBC3003E7311 /* ItemListViewModel.swift in Sources */,
+				B6A496ED291B0251006EA970 /* MainView.swift in Sources */,
 				B6316AD129172D5300732D1C /* ListComponent.swift in Sources */,
 				B652ABBE290A0E0100E4EE6D /* MonthModel.swift in Sources */,
 				B63FB93C29087D5B00BCC7FB /* OverviewView.swift in Sources */,

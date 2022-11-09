@@ -6,79 +6,65 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SideMenu: View {
-    @Binding var showMenu: Bool
+    @Binding var selectedTab: String
+    
+    @Namespace var animation
+    
+    var name: String
+    let photo: URL?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            VStack(alignment: .leading, spacing: 12) {
-                Image("logo-my-market-simple")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 65, height: 65)
-                
-                    Text("My Market")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                
-                // calendar
-            } // VStack
-            .padding(.horizontal)
-            .padding(.leading)
+        VStack(alignment: .leading, spacing: 15) {
+            KFImage(photo)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+                .frame(width: 64, height: 64)
+                .clipShape(Circle())
+                .padding(.top, 50)
             
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    VStack(alignment: .leading, spacing: 45) {
-                        TabButton(title: "Perfil", image: "person")
-                        
-                        TabButton(title: "Gastos", image: "creditcard.circle")
-                        
-                        TabButton(title: "Listas", image: "note.text")
-                        
-                        TabButton(title: "Sair", image: "power")
-                        
-                    }// VStack
-                    .padding()
-                    .padding(.leading)
-                    .padding(.top, 35)
-                }// VStack
+            VStack(alignment: .leading, spacing: 5) {
+                Text(name)
+                    .font(.system(size: 24, weight: .semibold))
                 
-            }// ScrollView
+                Text("Death")
+                    .font(.system(size: 14))
+                    .padding(.bottom, 24)
+            }
+            
+            VStack(alignment: .leading, spacing: 0) {
+                TabButton(title: "Home", image: "house", animation: animation, selectedTab: $selectedTab)
+                
+                TabButton(title: "Profile", image: "person", animation: animation, selectedTab: $selectedTab)
+                
+                TabButton(title: "Notification", image: "bell", animation: animation, selectedTab: $selectedTab)
+                
+                TabButton(title: "List", image: "list.bullet", animation: animation, selectedTab: $selectedTab)
+                
+            }// VStack
+            .padding(.leading, -20)
+            .padding(.top, -10)
+            
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: 0) {
+                TabButton(title: "Logout", image: "power", animation: animation, selectedTab: .constant(""))
+                    .padding(.leading, -20)
+            }// VStack
             
         }// VStack
-        .padding(.vertical)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(width: getRect().width - 90)
-        .frame(maxHeight: .infinity)
-        .background(
-            Color.theme.blueSecondary
-                .opacity(0.4)
-                .ignoresSafeArea(.container, edges: .vertical)
-        )
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-    
-    @ViewBuilder
-    func TabButton(title: String, image: String) -> some View {
-        
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Image(systemName: image)
-                .resizable()
-                .renderingMode(.template)
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 22, height: 22)
-            
-            Text(title)
-        })
-        .foregroundColor(Color.theme.bluePrimary)
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .foregroundColor(Color.theme.gray)
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenu(showMenu: .constant(true))
+        SideMenu(selectedTab: .constant(""), name: "", photo: URL(string: ""))
     }
 }
 

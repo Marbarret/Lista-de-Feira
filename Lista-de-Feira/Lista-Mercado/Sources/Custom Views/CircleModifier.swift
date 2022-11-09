@@ -25,6 +25,6 @@ struct CircleModifier: ViewModifier {
             .frame(width: self.width, height: self.height)
             .offset(x: self.x , y: self.y)
             .blur(radius: 8)
-            .foregroundColor(Color.theme.background.opacity(0.5))
+            .foregroundColor(Color.theme.primaryColor.opacity(0.5))
     }
 }

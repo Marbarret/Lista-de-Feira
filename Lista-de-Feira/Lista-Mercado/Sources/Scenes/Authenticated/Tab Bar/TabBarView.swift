@@ -8,34 +8,22 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State var current = "Home"
+    @Binding var selectedTab: String
+    
+    init(selectedTab: Binding<String>) {
+        self._selectedTab = selectedTab
+        UITabBar.appearance().isHidden = true
+    }
     
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+        TabView(selection: $selectedTab) {
+            InitialView(homeViewModel: .init(authService: AuthService()))
+                .tag("Home")
             
-            TabView(selection: $current) {
-                InitialView(homeViewModel: .init(authService: AuthService()))
-                    .tag("Home")
-                
-//                OverviewView()
-//                    .tag("Carteira")
-                
-                ProfileView()
-                    .tag("Perfil")
-            }
-            
-            HStack(spacing: 0) {
-                TabButton(title: "Home", image: "house", selected: $current)
-                
-                TabButton(title: "Carteira", image: "wallet.pass", selected: $current)
-                
-                TabButton(title: "Perfil", image: "person.fill", selected: $current)
-            }
-            .padding(.vertical, 12)
-            .padding(.horizontal)
-            .background(Color.theme.bluePrimary)
-            .clipShape(Capsule())
-            .padding(.horizontal, 25)
+//            OverviewView()
+//                .tag("Carteira")
+            ProfileView()
+                .tag("Profile")
         }
     }
 }

@@ -36,7 +36,7 @@ struct SplashScreenView: View {
                     ProgressView()
                         .font(.title2)
                         .frame(width: 60, height: 60)
-                        .background(Color.theme.background)
+                        .background(Color.theme.primaryColor)
                         .cornerRadius(10)
                 }
             }

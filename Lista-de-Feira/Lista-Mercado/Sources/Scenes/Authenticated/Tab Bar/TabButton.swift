@@ -10,30 +10,38 @@ import SwiftUI
 struct TabButton: View {
     var title: String
     var image: String
-    @Binding var selected: String
+    var animation: Namespace.ID
+
+    @Binding var selectedTab: String
     
     var body: some View {
         Button(action: {
             withAnimation(.spring()) {
-                selected = title
+                selectedTab = title
             }
-        }) {
-            HStack {
-                Image(systemName: image)
-                    .resizable()
-                    .foregroundColor(Color.theme.background)
-                    .frame(width: 20, height: 20)
-                
-                if selected == title {
+        }, label: {
+                HStack(spacing: 10) {
+                    Image(systemName: image)
+                        .font(.title2)
+                    
                     Text(title)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.theme.background).foregroundColor(.white)
-                }
-            }
-            .padding(.vertical, 10)
-            .padding(.horizontal)
-            .background(Color.white.opacity(selected == title ? 0.08: 0))
-            .clipShape(Capsule())
-        }
+                        .fontWeight(.semibold)
+                }// HStack
+                .foregroundColor(selectedTab == title ? Color.theme.primaryColor : Color.theme.gray)
+                .padding(.vertical, 12)
+                .padding(.horizontal, 20)
+                //max frame
+                .frame(maxWidth: getRect().width - 170, alignment: .leading)
+                .background(
+                    ZStack {
+                        if selectedTab == title {
+                            Color.theme.bluePrimary
+                                .opacity(selectedTab == title ? 1 : 0)
+                                .matchedGeometryEffect(id: "TAB", in: animation)
+                                .clipShape(Corners(corner: [.topLeft, .bottomLeft], size: CGSize(width: 5, height: 5)))
+                        }
+                    }
+                )// background
+               })// Button
     }
 }

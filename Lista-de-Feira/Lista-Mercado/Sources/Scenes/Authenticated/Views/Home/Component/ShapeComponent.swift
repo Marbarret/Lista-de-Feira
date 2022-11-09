@@ -34,7 +34,7 @@ struct ShapeComponent: View {
         }// HStack
         .padding(.horizontal, 20)
         .padding(.vertical, 15)
-        .background(Color.theme.background)
+        .background(Color.theme.primaryColor)
         .clipShape(Corners(corner: [.topLeft, .bottomLeft], size: CGSize(width: 10, height: 10)))
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
     }

@@ -16,20 +16,14 @@ struct InitialView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    HStack(spacing: 10) {
-                        ProfileComponent(name: homeViewModel.user?.givenName ?? "", photo: homeViewModel.user?.imgUser)
-                        
-                        Spacer()
-                        
-                        Button {
-                            
-                        } label: {
-                            
-                        }
-                        
-                    }// HStack
-                    .padding()
-                    .foregroundColor(.white)
+//                    Spacer()
+//                    HStack(spacing: 10) {
+//                        Spacer()
+//                        ProfileComponent(name: homeViewModel.user?.givenName ?? "", photo: homeViewModel.user?.imgUser)
+//
+//                    }// HStack
+//                    .padding(.bottom, 30)
+//                    .foregroundColor(.white)
                     
                     // MARK: - Add List
                     HStack {
@@ -51,9 +45,9 @@ struct InitialView: View {
                                 Spacer()
                                 Image(systemName: "plus.circle.fill")
                                     .font(.system(size: 30))
-                                    .foregroundColor(Color.theme.background)
+                                    .foregroundColor(Color.theme.primaryColor)
                             }// HStack
-                            .foregroundColor(Color.theme.background)
+                            .foregroundColor(Color.theme.primaryColor)
                             .padding(.horizontal, 20)
                             .padding(.vertical, 17)
                             .background(Color.theme.blueSecondary)
@@ -62,7 +56,7 @@ struct InitialView: View {
                         }// Button
                     }// HStack
                     .padding()
-                    .padding(.top, -30)
+                    .padding(.top, 40)
                     
                     ExplorerComponent(userList: ListsUser(title: "Setembro", month: ""))
                     

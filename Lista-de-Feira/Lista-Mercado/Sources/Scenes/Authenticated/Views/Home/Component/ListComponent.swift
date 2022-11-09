@@ -17,7 +17,7 @@ struct ListComponent: View {
                 Text(nameList)
                     .font(.title2)
                     .fontWeight(.light)
-                    .foregroundColor(Color.theme.background)
+                    .foregroundColor(Color.theme.primaryColor)
                 
                 Text(date)
                     .font(.footnote)

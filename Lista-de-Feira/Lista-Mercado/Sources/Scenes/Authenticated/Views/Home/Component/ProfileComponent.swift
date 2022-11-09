@@ -9,23 +9,21 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileComponent: View {
-    let name: String
-    let photo: URL?
+    var name: String
+    var photo: URL?
     
     var body: some View {
         HStack {
             buttonProfileUser
             
-            VStack {
-                Text("Hello,")
-                    .font(.footnote)
-                + Text("\n\(name)")
-                    .font(.title3)
-            }
-            Spacer()
+//            VStack {
+//                Text("Hello,")
+//                    .font(.footnote)
+//                + Text("\n\(name)")
+//                    .font(.title3)
+//            }
+//            Spacer()
             
-            buttonSideMenu
-
         }//HStack
     }
 }
@@ -37,21 +35,10 @@ extension ProfileComponent {
         } label: {
             KFImage(photo)
                 .resizable()
-                .cornerRadius(25)
-                .frame(width: 50, height: 50)
+                .cornerRadius(10)
+                .frame(width: 30, height: 30)
         }
-        .padding()
-    }
-    
-    private var buttonSideMenu: some View {
-        Button {
-            print("Clique no Menu")
-        } label: {
-            Image(systemName: "text.justify")
-                .resizable()
-                .foregroundColor(Color.theme.gray)
-                .frame(width: 22, height: 22)
-        }
-        .padding()
+        .padding(.trailing, 5)
+        
     }
 }

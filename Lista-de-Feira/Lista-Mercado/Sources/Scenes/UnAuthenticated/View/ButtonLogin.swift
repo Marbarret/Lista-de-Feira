@@ -25,7 +25,7 @@ struct ButtonLogin: View {
                 .foregroundColor(Color.white)
                 .padding()
                 .frame(width: 90, height: 60)
-                .background(Color.theme.background)
+                .background(Color.theme.primaryColor)
                 .cornerRadius(20)
             }
             .padding()

@@ -24,7 +24,7 @@ struct CreateNewList: View {
             
             VStack {
                 TextField("Type something here", text: $textFieldName)
-                    .foregroundColor(Color.theme.background)
+                    .foregroundColor(Color.theme.primaryColor)
                     .font(.system(size: 12, weight: .bold, design: .rounded))
                     .padding()
                     .frame(height: 55)
@@ -45,7 +45,7 @@ struct CreateNewList: View {
                         .foregroundColor(.white)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(isButtonDisabled ? Color.theme.blueSecondary : Color.theme.background)
+                        .background(isButtonDisabled ? Color.theme.blueSecondary : Color.theme.primaryColor)
                         .cornerRadius(10)
                 })
             }// VStack
