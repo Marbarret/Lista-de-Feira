@@ -20,7 +20,7 @@ struct SplashScreenView: View {
                 ButtonLogin()
                 
                 Text("Informações de Aplicativo")
-                    .font(.headline)
+                    .font(.system(size: 10))
                     .fontWeight(.light)
                     .foregroundColor(Color.theme.bluePrimary)
                 Spacer()

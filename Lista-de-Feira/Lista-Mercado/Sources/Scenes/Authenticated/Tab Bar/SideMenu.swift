@@ -10,6 +10,8 @@ import Kingfisher
 
 struct SideMenu: View {
     @Binding var selectedTab: String
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @State private var showAlert = false
     
     @Namespace var animation
     
@@ -51,8 +53,22 @@ struct SideMenu: View {
             Spacer()
             
             VStack(alignment: .leading, spacing: 0) {
-                TabButton(title: "Logout", image: "power", animation: animation, selectedTab: .constant(""))
-                    .padding(.leading, -20)
+                Button {
+                    showAlert = true
+                } label: {
+                    Image(systemName: "power")
+                        .padding()
+                        .foregroundColor(Color.theme.primaryColor)
+                }
+                .actionSheet(isPresented: $showAlert) {
+                    ActionSheet(title: Text("msgLogout"), buttons: [
+                        .cancel(Text("cancel")) { },
+                        .destructive(Text("logout")) {
+                            authViewModel.signOut()
+                        }
+                    ])
+                }
+                
             }// VStack
             
         }// VStack

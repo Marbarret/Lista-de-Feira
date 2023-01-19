@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>209977313025-1slhfdf1c80bka0i0ops2j7dvcj7t0cb.apps.googleusercontent.com</string>
+	<string>542038933998-sb91u56h2av555dqp1fnj6mjqbtv82bm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.209977313025-1slhfdf1c80bka0i0ops2j7dvcj7t0cb</string>
+	<string>com.googleusercontent.apps.542038933998-sb91u56h2av555dqp1fnj6mjqbtv82bm</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAQD3Qm7deGUGhWE6ZINx-X1O5yUdjIUho</string>
+	<string>AIzaSyABC6vqLiEKF-jAqCgq4LgAp30giZwvEZU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>209977313025</string>
+	<string>542038933998</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.marcilene</string>
+	<string>lista-de-feira</string>
 	<key>PROJECT_ID</key>
-	<string>loginfirebase-fa4d1</string>
+	<string>lista-de-feira</string>
 	<key>STORAGE_BUCKET</key>
-	<string>loginfirebase-fa4d1.appspot.com</string>
+	<string>lista-de-feira.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:209977313025:ios:b9285c10ceb7c01a643d00</string>
+	<string>1:542038933998:ios:5c57ad4cf7994851b50eff</string>
 </dict>
 </plist>

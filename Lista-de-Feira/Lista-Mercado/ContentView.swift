@@ -18,7 +18,7 @@ struct ContentView: View {
         switch authViewModel.statusLogin {
         case .signedIn: MainView(homeViewModel: .init(authService: AuthService()))
         case .signedOut: SplashScreenView()
-        case .unknown: ProgressView()
+        case .unknown: SplashScreenView()
         }
     }
 }

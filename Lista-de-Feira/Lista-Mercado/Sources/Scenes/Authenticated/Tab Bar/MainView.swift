@@ -54,7 +54,7 @@ struct MainView: View {
                     VStack(spacing: 5) {
                         Capsule()
                             .fill(showMenu ? Color.white : Color.theme.primaryColor)
-                            .frame(width: 20, height: 3)
+                            .frame(width: 20, height: 2)
                             .rotationEffect(.init(degrees:  showMenu ? -50 : 0))
                             .offset(x: showMenu ? 2 : 0, y: showMenu ? 8 : 0)
                         

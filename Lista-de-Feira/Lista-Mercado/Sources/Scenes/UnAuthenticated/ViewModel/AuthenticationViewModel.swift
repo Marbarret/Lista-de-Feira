@@ -47,10 +47,9 @@ class AuthenticationViewModel: ObservableObject {
                 }
             }
         }
-
     }
     
-    func signOutView() {
+    func signOut() {
         if service.signOut() {
             self.statusLogin = .signedOut
         }
